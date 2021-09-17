@@ -125,21 +125,7 @@ function getTime(){
 	seconds = time.getSeconds();
 	str = str + year +"-"+ month +"-"+ day + " " +hour+":"+minutes+":"+seconds;
 	
-	if(month<10){
-		month = "0" month;
-	}
-	if(date<10){
-		date = "0" date;
-	}
-	if(hour<10){
-		hour = "0" hour;
-	}
-	if(minutes<10){
-		minutes = "0" minutes;
-	}
-	if(seconds<10){
-		seconds = "0" seconds;
-	}
+	
 	
 	p.innerText = str;
  
