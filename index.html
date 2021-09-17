@@ -123,11 +123,29 @@ function getTime(){
 	hour = time.getHours();
 	minutes = time.getMinutes();
 	seconds = time.getSeconds();
+	
+	if(month<10){
+		month = "0" month;
+	}
+	if(date<10){
+		date = "0" date;
+	}
+	if(hour<10){
+		hour = "0" hour;
+	}
+	if(minutes<10){
+		minutes = "0" minutes;
+	}
+	if(seconds<10){
+		seconds = "0" seconds;
+	}
+	
 	str = str + year +"-"+ month +"-"+ day + " " +hour+":"+minutes+":"+seconds;
 	
+		
 	p.innerText = str;
  
-	setTimeout(getTime,1000);
+	setTimeout(getTime,10000);
 }
  
  
