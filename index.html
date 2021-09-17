@@ -1,4 +1,10 @@
-
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生进出校报备结果页</title>
+<style>
     input {
         border: none;
     }
@@ -63,3 +69,71 @@
     .time + .time{
         /* margin-top: 20px; */
     }
+</style></head>
+
+
+<body>
+    <div class="item">
+        <span class="label">姓名:</span> <input type="text" value="张明" style="font-size:14px;">
+    </div>
+    <div class="seline">  
+    <div class="item">
+        <span class="label">学号:</span> <input type="text" value="20190301060457" style="font-size:14px;">
+    </div>
+  <div class="seline"> 
+    <div class="item">
+        <span class="label">学院:</span> <input type="text" value="行政法学院" style="font-size:14px;">
+    </div>
+  <div class="seline"> 
+    <div class="item">
+        <span class="label">年级:</span> <input type="text" value="硕士2020级" style="font-size:14px;">
+    </div>
+  <div class="seline"> 
+  <div class="item">
+        <span class="label">班级:</span> <input type="text" value="行政硕20级行政1班" style="font-size:14px;"> 
+    </div>
+ <div class="seline">
+    </div>
+    <div class="time">
+     
+    </div>
+    <div class="time">
+    <br><br>
+   </div>
+
+
+    </div>
+    <div class="button">
+        <div>出校<br>已报备</div>
+        
+    </div>
+ <div class="lasttime">
+    <div id="timeP">2021-9-18 0:36:30</div>
+
+
+<script>
+
+function getTime(){
+	str = ""
+	var p = document.getElementById("timeP");
+	time =  new Date();
+	year = time.getFullYear();
+	month = time.getMonth() + 1;
+	day = time.getDate();
+	hour = time.getHours();
+	minutes = time.getMinutes();
+	seconds = time.getSeconds();
+	str = str + year +"-"+ month +"-"+ day + " " +hour+":"+minutes+":"+seconds;
+	
+	p.innerText = str;
+ 
+	setTimeout(getTime,1000);
+}
+ 
+ 
+window.onload = function(){
+	getTime();
+}
+
+</script>
+</div></div></div></div></body></html>
