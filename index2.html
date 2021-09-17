@@ -117,28 +117,16 @@ function getTime(){
 	str = ""
 	var p = document.getElementById("timeP");
 	time =  new Date();
-	var year = time.getFullYear();
-	var month = time.getMonth() + 1;
-	var day = time.getDate();
-	var hour = time.getHours();
-	var minutes = time.getMinutes();
-	var seconds = time.getSeconds();
+	year = time.getFullYear();
+	month = time.getMonth() + 1;
+	day = time.getDate();
+	hour = time.getHours();
+	minutes = time.getMinutes();
+	seconds = time.getSeconds();
+}
 	
-	if(month<10){
-		month = "0" month;
-	}
-	if(day<10){
-		day = "0" day;
-	}
-	if(hour<10){
-		hour = "0" hour;
-	}
-	if(minutes<10){
-		minutes = "0" minutes;
-	}
-	if(seconds<10){
-		seconds = "0" seconds;
-	}
+
+	
 	
 	str = str + year +"-"+ month +"-"+ day + " " +hour+":"+minutes+":"+seconds;
 	
