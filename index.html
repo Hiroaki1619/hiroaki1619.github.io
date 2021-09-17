@@ -13,7 +13,7 @@
         height: 1px;
     }
     .button{
-        background-color: #1d90fb;
+        background-color: #008001;
         color: #fff;
         border-radius: 0px;
         bottom: 20px;
@@ -33,7 +33,7 @@
     }
     .label{
         color: #3E3E3E;
-       /* font-weight: bold;*/
+        font-weight: bold;
         font-size: 14px;
         width: auto;
         margin-left: 0px;
@@ -56,7 +56,7 @@
     }
     .lasttime{
         line-height: 40px;
-        font-size: 28px; 
+        font-size: 28px;       
         padding: 10 15px;
         font-weight: bold;
         text-align:center;
@@ -86,7 +86,7 @@
     </div>
   <div class="seline"> 
     <div class="item">
-        <span class="label">年级:</span> <input type="text" value="本科2018级" style="font-size:14px;">
+        <span class="label">年级:</span> <input type="text" value="本科2020级" style="font-size:14px;">
     </div>
   <div class="seline"> 
   <div class="item">
@@ -104,11 +104,11 @@
 
     </div>
     <div class="button">
-        <div>出校<br>已报备</div>
+        <div>进校<br>已报备</div>
         
     </div>
  <div class="lasttime">
-    <div id="timeP">2021-9-18 0:36:30</div>
+    <div id="timeP">2021-9-18 2:6:4</div>
 
 
 <script>
@@ -123,26 +123,8 @@ function getTime(){
 	hour = time.getHours();
 	minutes = time.getMinutes();
 	seconds = time.getSeconds();
-	
-	if(month<10){
-		month = "0" month;
-	}
-	if(date<10){
-		date = "0" date;
-	}
-	if(hour<10){
-		hour = "0" hour;
-	}
-	if(minutes<10){
-		minutes = "0" minutes;
-	}
-	if(seconds<10){
-		seconds = "0" seconds;
-	}
-	
 	str = str + year +"-"+ month +"-"+ day + " " +hour+":"+minutes+":"+seconds;
 	
-		
 	p.innerText = str;
  
 	setTimeout(getTime,10000);
