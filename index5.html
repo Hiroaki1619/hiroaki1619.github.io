@@ -1,9 +1,32 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="UTF-8">
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <style>
+    * {padding:0px;margin:0px;}
+    html,body {width:100%;height:100%;overflow:hidden;}
+    #box {height:100%;width:100%;padding:80px 0px 40px 0px;}
+    #top{background:#33ff00;width:100%;height:80px;position:absolute;top:0px;left:0px;}
+    #main {background:#ff0;padding-left:200px;position:relative;}
+    #bottom{background:#33ff00;width:100%;height:40px;position:absolute;bottom:0px;left:0px;}
+    #left{height:100%;width:200px;position:absolute;left:0px;background:#f0f;}
+    #right {background:#0ff;}
+  </style>
+    <script>
+        window.onload=function(){
+            //var box = document.getElementById("box");
+            var h = document.body.clientHeight - 120;
+            var w = document.body.clientWidth - 200;
+                                                         
+            var main = document.getElementById("main");
+            main.style.height = h + "px";
+
+            var right = document.getElementById("right");
+            right.style.height = h+"px";
+            right.style.width = w+"px";
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="md5.js"></script>
+    <script src="%E5%AD%A6%E7%94%9F%E8%BF%9B%E5%87%BA%E6%A0%A1%E6%8A%A5%E5%A4%87%E7%BB%93%E6%9E%9C%E9%A1%B5_files/md5.%25E4%25B8%258B%25E8%25BD%25BD"></script>
     <title>学生进出校报备结果页</title>
 <style>
     input {
@@ -23,7 +46,7 @@
         right: 0;
         margin: auto;
         text-align: center;
-        height: 260px;
+        height: 220px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -41,7 +64,7 @@
         margin-left: 0px;
         display: inline-block;
     }
-    input{
+    p{
        	color: #9C9C9C;
 	    text-align:right;
 	    float:right;  
@@ -70,7 +93,6 @@
     color: grey;
     font-size: .5rem;
     text-align: center;
-    PADDING-TOP:6px;
     }
     
     .lasttime{
@@ -88,51 +110,83 @@
     .time + .time{
         /* margin-top: 20px; */
     }
+    .security-code[data-v-7e9ef96a] {
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 700;
+    color: #ce6392;
+}
+html {
+    font-size: 10px!important;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,Hiragino Sans GB,Microsoft Yahei,sans-serif;
+}
+.info-btn-box[data-v-7e9ef96a] {
+    width: 100%;
+    height: 50vw;
+    box-sizing: border-box;
+    padding: 0 20vw;
+}
+.info-btn-back-in[data-v-7e9ef96a] {
+    background-color: green;
+    color: #fff;
+    border-radius: 8px;
+}
+.info-btn[data-v-7e9ef96a] {
+    width: 60vw;
+    height: 50vw;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 15vw;
+    box-sizing: border-box;
+    padding: 8vw 0;
+}
+.info-time[data-v-7e9ef96a] {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+b {
+    font-weight: bold;
+}
+
 </style></head>
 
-<body style="background-repeat: no-repeat;" background="cb.gif">
 
-<body>
+<body style="background-repeat: no-repeat;" background="cb.gif">
+    
     <div class="item">
-        <span class="label">姓名:</span> <input type="text" value="陈栅" style="font-size:14px;">
+        <span class="label">姓名:</span> <p style="font-size:14px;" contenteditable="true">陈栅</p>
     </div>
     <div class="seline">  
     <div class="item">
-        <span class="label">学号:</span> <input type="text" value="2020022078" style="font-size:14px;">
+        <span class="label">学号:</span> <p style="font-size:14px;" contenteditable="true">2020022078</p>
     </div>
   <div class="seline"> 
     <div class="item">
-        <span class="label">学院:</span> <input type="text" value="经济法学院" style="font-size:14px;">
+        <span class="label">学院:</span> <p style="font-size:14px;" contenteditable="true">经济法学院</p>
     </div>
   <div class="seline"> 
     <div class="item">
-        <span class="label">年级:</span> <input type="text" value="本科2020级" style="font-size:14px;">
+        <span class="label">年级:</span> <p style="font-size:14px;" contenteditable="true">本科2020级</p>
     </div>
   <div class="seline"> 
   <div class="item">
-        <span class="label">班级:</span> <input type="text" value="经济法本20级本10班" style="font-size:14px;"> 
+        <span class="label">班级:</span> <p style="font-size:14px;" contenteditable="true">经济法本20级本10班</p>
     </div>
  <div class="seline">
+  
     </div>
-    <div class="yanzhengma">
-         校验码:
-         <span id="scode">ce309b</span>
-    </div>
+<div data-v-7e9ef96a="" class="security-code"> 校验码：D1DEE3 </div>
      <div class="info">
     注意：校验码动态变化，出入用户校验码一致！
     </div>
-    <div class="time">
-    <br><br>
-   </div>
-
-
-    </div>
-    <div class="button">
-        <div>出校<br>已报备</div>
-        
-    </div>
- <div class="lasttime">
-    <div id="timeP">2021-9-18 18:23:2</div>
+<div data-v-7e9ef96a="" class="info-btn-box"><div data-v-7e9ef96a="" class="info-btn info-btn-back-in"> 进校 <br data-v-7e9ef96a=""> 已报备 </div></div>
+<div data-v-7e9ef96a="" id="timeP" class="info-time" style="font-weight: bold;">2021-12-29 0:25:23</div>
 
 
 <script>
@@ -149,6 +203,7 @@ function getTime(){
 	seconds = time.getSeconds();
 	str = str + year +"-"+ month +"-"+ day + " " +hour+":"+minutes+":"+seconds;
 	p.innerText = str;
+	p.style.fontWeight = 'bold';
 	/*setTimeout(getTime,1000);*/
 }
  
@@ -156,7 +211,9 @@ function code(){
     var e = document.getElementById("scode");
     var a=(new Date).getHours()+"li456852";
     var b = md5(a);
-    e.innerText = b.substring(b.length-6)
+    c = b.substring(b.length-6).toUpperCase();
+    console.log(c);
+    e.innerText = c;
     
     
     /*return e.substring(e.length-6)*/}
